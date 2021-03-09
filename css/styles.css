@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Keep Calm";
+  src: url("fonts/KeepCalm-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Avenir Next Cyr";
+  src: url("fonts/AVENIRNEXTCYR-REGULAR.OTF") format("otf");
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Keep Calm";
+}
+
+p {
+  font-family: "Avenir Next Cyr";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.top-section-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+
+  padding-right: 20px;
+  padding-left: 20px;
+
+  height: 100%;
+}
+
+.background {
+  background-image: url("https://res.cloudinary.com/dzixj0ktk/image/upload/v1595229064/Discount_Deck_Landing_Page-03_cl1dwt.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  grid-area: 1 / 1 / 4 / 5;
+
+  height: 100%;
+
+  filter: blur(35px);
+  -webkit-filter: blur(35px);
+}
+
+.foreground {
+  z-index: 2;
+
+  grid-area: 2 / 2 / 3 / 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  width: auto;
+
+  color: #fff;
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 500px;
+}
+
+.header-text {
+  font-size: 38.5px;
+  line-height: 1.4;
+
+  margin-bottom: 21px;
+}
+
+.body-text {
+  font-size: 21px;
+  line-height: 1.4;
+  /* width: 49ch; */
+  width: 37ch;
+
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+
+.badges-container {
+  display: flex;
+}
+
+.spacer {
+  width: 25px;
+}
+
+.store-badge {
+  height: 52.5px;
+
+  transition: transform 0.1s linear 0s;
+}
+
+.store-badge:hover {
+  transform: scale(1.05);
+}
+
+.scroll-container {
+  z-index: 2;
+  grid-area: 3 / 2 / 4 / 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #fff;
+  text-align: center;
+}
+
+.arrows-container {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(105%) contrast(102%);
+  width: 25px;
+}
+
+.arrow2, .arrow3 {
+  margin-left: 12px;
+}
+
+.bottom-section-container {
+  height: 100%;
+}
+
+/* Transitions & Animations */
+.fade-in {
+  animation: fadeIn ease-in 3.5s infinite;
+  -webkit-animation: fadeIn ease-in 3.5s infinite;
+  -moz-animation: fadeIn ease-in 3.5s infinite;
+  -o-animation: fadeIn ease-in 3.5s infinite;
+  -ms-animation: fadeIn ease-in 3.5s infinite;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-section-container {
+    grid-template-columns: 1fr;
+  }
+  .background {
+    grid-area: 1 / 1 / 4;
+  }
+  .foreground {
+    grid-area: 2 / 1;
+  }
+  .scroll-container {
+    grid-area: 3 / 1 / 4;
+  }
+}
