@@ -1,224 +1,117 @@
 @font-face {
-  font-family: "Keep Calm";
-  src: url("fonts/KeepCalm-Medium.ttf") format("ttf");
+  font-family: "Gilroy Extra Bold";
+  src: url("../fonts/gilroy-extrabold-webfont.woff") format("woff"),
+       url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Avenir Next Cyr";
-  src: url("fonts/AVENIRNEXTCYR-REGULAR.OTF") format("otf");
+  font-family: "Gilroy Light";
+  src: url("fonts/gilroy-light-webfont.woff") format("woff"),
+       url("fonts/gilroy-light-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 body, html {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Keep Calm";
+  font-family: "Gilroy Extra Bold";
+  font-weight: 700;
 }
 
 p {
-  font-family: "Avenir Next Cyr";
+  font-family: "Gilroy Light";
+  font-weight: 400;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.top-section-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
-
-  padding-right: 20px;
-  padding-left: 20px;
-
-  height: 100%;
+.text-gradient {
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  background: -webkit-linear-gradient(-70deg,#58CBC6,#81DD5C);
+  /* background: -webkit-linear-gradient(-70deg,#a2facf,#64acff); */
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-.background {
-  background-image: url("https://res.cloudinary.com/dzixj0ktk/image/upload/v1595229064/Discount_Deck_Landing_Page-03_cl1dwt.png");
+.top-section-container {
+  background-image: url("https://res.cloudinary.com/dzixj0ktk/image/upload/v1617692943/Illustration_for_mobile_with_shading_vwzcbp.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  grid-area: 1 / 1 / 4 / 5;
-
   height: 100%;
-
-  filter: blur(35px);
-  -webkit-filter: blur(35px);
+  width: 100%;
 }
 
-.foreground {
-  z-index: 2;
+.content-container {
+  margin-top: auto;
+  margin-bottom: 25%;
+}
 
-  grid-area: 2 / 2 / 3 / 3;
+.header {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -.025em;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  text-shadow: 0px 0px 25px rgb(255 255 255 / 10%);
+}
 
-  width: auto;
-
-  color: #fff;
+.tagline {
+  color: #8193b2;
+  font-style: italic;
+  margin-bottom: 5%;
   text-align: center;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 500px;
-}
-
-.header-text {
-  font-size: 38.5px;
-  line-height: 1.4;
-
-  margin-bottom: 21px;
-}
-
-.body-text {
-  font-size: 21px;
-  line-height: 1.4;
-  /* width: 49ch; */
-  width: 37ch;
-
-  margin-top: 0;
-  margin-bottom: 42px;
-}
-
-.badges-container {
-  display: flex;
-}
-
-.spacer {
-  width: 25px;
-}
-
-.store-badge {
-  height: 52.5px;
-
-  transition: transform 0.1s linear 0s;
-}
-
-.store-badge:hover {
-  transform: scale(1.05);
-}
-
-.scroll-container {
-  z-index: 2;
-  grid-area: 3 / 2 / 4 / 3;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  color: #fff;
-  text-align: center;
-}
-
-.arrows-container {
+/* AppStore Badge Styling */
+.content-container > a {
   display: flex;
   justify-content: center;
 }
 
-.arrow {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg) brightness(105%) contrast(102%);
-  width: 25px;
+.links-container {
+  margin-top: auto;
+  margin-bottom: 5px;
+
+  font-family: "Gilroy Light";
+  font-weight: 400;
+
+  font-size: 14px;
 }
 
-.arrow2, .arrow3 {
-  margin-left: 12px;
+.link {
+  text-decoration: none;
+  color: #fff;
 }
 
-.bottom-section-container {
-  height: 100%;
+.copyright {
+  color: #fff;
+  margin-bottom: 5px;
+
+  font-family: "Gilroy Light";
+  font-weight: 400;
+
+  font-size: 12px;
 }
 
-/* Transitions & Animations */
-.fade-in {
-  animation: fadeIn ease-in 3.5s infinite;
-  -webkit-animation: fadeIn ease-in 3.5s infinite;
-  -moz-animation: fadeIn ease-in 3.5s infinite;
-  -o-animation: fadeIn ease-in 3.5s infinite;
-  -ms-animation: fadeIn ease-in 3.5s infinite;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .top-section-container {
-    grid-template-columns: 1fr;
+    background-image: url("https://res.cloudinary.com/dzixj0ktk/image/upload/v1617692960/Illustration_with_shading_u8ylzx.png");
   }
-  .background {
-    grid-area: 1 / 1 / 4;
-  }
-  .foreground {
-    grid-area: 2 / 1;
-  }
-  .scroll-container {
-    grid-area: 3 / 1 / 4;
+
+  .content-container {
+    margin-bottom: 0;
   }
 }
